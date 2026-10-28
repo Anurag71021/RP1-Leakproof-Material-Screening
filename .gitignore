@@ -33,3 +33,7 @@ reports/pytest_run_*.log
 
 # Packaging metadata
 *.egg-info/
+
+# Colab helper downloads
+cloudflared
+reports/colab_*.log

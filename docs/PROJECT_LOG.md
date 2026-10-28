@@ -229,6 +229,16 @@ Command: `.venv/bin/python -c "import app; print('APP_IMPORT_OK')"` → `APP_IMP
 Final report written to `reports/FINAL_REPORT.md` using the mandatory template and
 only values read from persisted artefacts.
 
+### 2026-10-29 — Colab bootstrap
+
+Added `colab_setup.py` (a Colab bootstrap, deliberately not named `setup.py` so it
+cannot interfere with setuptools/pyproject packaging). It creates a Python 3.10
+`uv` environment, installs the pinned stack and `matbench==0.6 --no-deps`,
+regenerates the gitignored dataset/model artefacts, runs the tests, and can launch
+Streamlit through a Cloudflare quick tunnel. Added `docs/COLAB.md` and a Colab
+section in `README.md`. Verified `--help` and `--dry-run --run --app`; the test
+suite still reports 75 passed.
+
 ---
 
 ## Open deviations and known issues

@@ -98,6 +98,21 @@ pip install -e . --no-deps
 The dataset and folds still come from the official `matbench.bench` API. This is a
 packaging workaround, recorded in `docs/PROJECT_LOG.md`.
 
+### Google Colab
+
+Two cells:
+
+```python
+!git clone https://github.com/Anurag71021/RP1-Leakproof-Material-Screening.git
+%cd RP1-Leakproof-Material-Screening
+!python colab_setup.py --run --app
+```
+
+`colab_setup.py` creates a Python 3.10 environment, installs the pinned stack,
+regenerates the gitignored dataset/model artefacts, runs the tests, and prints a
+temporary Cloudflare URL for the Streamlit app. See `docs/COLAB.md` for options
+and troubleshooting.
+
 ## 5. Reproduce the pipeline
 
 Run from the repository root, in this order:
