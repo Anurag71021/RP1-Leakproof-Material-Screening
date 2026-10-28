@@ -1,0 +1,84 @@
+2026-10-28T23:04:56Z INFO     src.data.loader | Cached 10987 samples; official folds: ['0', '1', '2', '3', '4']
+2026-10-28T23:04:56Z INFO     __main__ | Validating schema and target.
+2026-10-28T23:04:57Z INFO     __main__ | Auditing duplicate structures (coarse key + official fold assignment).
+2026-10-28T23:05:54Z INFO     __main__ | Writing locked official-fold manifest.
+2026-10-28T23:06:13Z INFO     src.models.train | === Model dummy | official 5-fold CV ===
+2026-10-28T23:06:14Z INFO     src.models.train | fold 0: featurizing 8789 train / 2198 test compositions (per-fold, no global matrix)
+2026-10-28T23:06:28Z INFO     src.models.train | fold 0 metrics: MAE=0.2943 RMSE=0.3749 R2=-0.0001
+2026-10-28T23:06:28Z INFO     src.models.train | fold 1: featurizing 8789 train / 2198 test compositions (per-fold, no global matrix)
+2026-10-28T23:06:44Z INFO     src.models.train | fold 1 metrics: MAE=0.2933 RMSE=0.3743 R2=-0.0001
+2026-10-28T23:06:44Z INFO     src.models.train | fold 2: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:06:59Z INFO     src.models.train | fold 2 metrics: MAE=0.2969 RMSE=0.3736 R2=-0.0000
+2026-10-28T23:06:59Z INFO     src.models.train | fold 3: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:07:14Z INFO     src.models.train | fold 3 metrics: MAE=0.2875 RMSE=0.3646 R2=-0.0003
+2026-10-28T23:07:14Z INFO     src.models.train | fold 4: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:07:29Z INFO     src.models.train | fold 4 metrics: MAE=0.2937 RMSE=0.3706 R2=-0.0005
+2026-10-28T23:07:29Z INFO     src.models.train | dummy summary: MAE=0.2931±0.0035 RMSE=0.3716±0.0042 R2=-0.0002±0.0002
+2026-10-28T23:07:29Z INFO     src.models.train | === Model ridge | official 5-fold CV ===
+2026-10-28T23:07:30Z INFO     src.models.train | fold 0: featurizing 8789 train / 2198 test compositions (per-fold, no global matrix)
+2026-10-28T23:07:45Z INFO     src.models.train | fold 0 metrics: MAE=0.1583 RMSE=0.2153 R2=0.6702
+2026-10-28T23:07:45Z INFO     src.models.train | fold 1: featurizing 8789 train / 2198 test compositions (per-fold, no global matrix)
+2026-10-28T23:08:01Z INFO     src.models.train | fold 1 metrics: MAE=0.1557 RMSE=0.2169 R2=0.6643
+2026-10-28T23:08:01Z INFO     src.models.train | fold 2: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:08:16Z INFO     src.models.train | fold 2 metrics: MAE=0.1574 RMSE=0.2125 R2=0.6764
+2026-10-28T23:08:16Z INFO     src.models.train | fold 3: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:08:32Z INFO     src.models.train | fold 3 metrics: MAE=0.1558 RMSE=0.2105 R2=0.6667
+2026-10-28T23:08:32Z INFO     src.models.train | fold 4: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:08:47Z INFO     src.models.train | fold 4 metrics: MAE=0.1570 RMSE=0.2167 R2=0.6578
+2026-10-28T23:08:47Z INFO     src.models.train | ridge summary: MAE=0.1568±0.0011 RMSE=0.2144±0.0028 R2=0.6671±0.0069
+2026-10-28T23:08:47Z INFO     src.models.train | === Model random_forest | official 5-fold CV ===
+2026-10-28T23:08:47Z INFO     src.models.train | fold 0: featurizing 8789 train / 2198 test compositions (per-fold, no global matrix)
+2026-10-28T23:09:10Z INFO     src.models.train | fold 0 metrics: MAE=0.1018 RMSE=0.1474 R2=0.8453
+2026-10-28T23:09:10Z INFO     src.models.train | fold 1: featurizing 8789 train / 2198 test compositions (per-fold, no global matrix)
+2026-10-28T23:09:34Z INFO     src.models.train | fold 1 metrics: MAE=0.1015 RMSE=0.1563 R2=0.8256
+2026-10-28T23:09:34Z INFO     src.models.train | fold 2: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:09:57Z INFO     src.models.train | fold 2 metrics: MAE=0.1011 RMSE=0.1506 R2=0.8375
+2026-10-28T23:09:57Z INFO     src.models.train | fold 3: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:10:22Z INFO     src.models.train | fold 3 metrics: MAE=0.1025 RMSE=0.1483 R2=0.8345
+2026-10-28T23:10:22Z INFO     src.models.train | fold 4: featurizing 8790 train / 2197 test compositions (per-fold, no global matrix)
+2026-10-28T23:10:46Z INFO     src.models.train | fold 4 metrics: MAE=0.1051 RMSE=0.1573 R2=0.8197
+2026-10-28T23:10:46Z INFO     src.models.train | random_forest summary: MAE=0.1024±0.0016 RMSE=0.1520±0.0046 R2=0.8325±0.0100
+2026-10-28T23:10:46Z INFO     src.models.train | Wrote /Users/anurag/Desktop/Projects_RP/results/metrics/benchmark_metrics.json and model comparison table.
+2026-10-28T23:12:23Z INFO     src.evaluation.validation | Y-randomization: ridge, 5 permutations
+2026-10-28T23:13:39Z INFO     src.evaluation.validation |   perm 0: R2=-0.0162 MAE=0.2956
+2026-10-28T23:14:56Z INFO     src.evaluation.validation |   perm 1: R2=-0.0068 MAE=0.2937
+2026-10-28T23:16:12Z INFO     src.evaluation.validation |   perm 2: R2=-0.0172 MAE=0.2955
+2026-10-28T23:17:28Z INFO     src.evaluation.validation |   perm 3: R2=-0.0138 MAE=0.2952
+2026-10-28T23:18:45Z INFO     src.evaluation.validation |   perm 4: R2=-0.0186 MAE=0.2958
+2026-10-28T23:18:45Z INFO     src.evaluation.validation | Y-randomization: random_forest, 2 permutations
+2026-10-28T23:21:04Z INFO     src.evaluation.validation |   perm 0: R2=-0.1116 MAE=0.3089
+2026-10-28T23:23:23Z INFO     src.evaluation.validation |   perm 1: R2=-0.1194 MAE=0.3097
+2026-10-28T23:23:43Z INFO     __main__ | Parity and residual diagnostics for random_forest (n=10987 OOF rows)
+2026-10-28T23:23:45Z INFO     __main__ | Learning curves for random_forest (official fold 0)
+2026-10-28T23:23:52Z INFO     src.evaluation.validation | learning curve random_forest n=878: train MAE=0.0556 val MAE=0.1434
+2026-10-28T23:24:03Z INFO     src.evaluation.validation | learning curve random_forest n=2197: train MAE=0.0484 val MAE=0.1288
+2026-10-28T23:24:23Z INFO     src.evaluation.validation | learning curve random_forest n=4394: train MAE=0.0456 val MAE=0.1148
+2026-10-28T23:24:59Z INFO     src.evaluation.validation | learning curve random_forest n=8789: train MAE=0.0443 val MAE=0.1019
+2026-10-28T23:30:17Z INFO     __main__ | Residual and parity diagnostics for random_forest
+2026-10-28T23:30:17Z INFO     __main__ | Conformal uncertainty for random_forest
+2026-10-28T23:30:17Z INFO     __main__ | Applicability domain (per official fold + deployment reference)
+2026-10-28T23:30:33Z INFO     src.evaluation.applicability | AD fold 0: {'n': 2198, 'in_domain': 2092, 'near_boundary': 99, 'out_of_domain': 7, 'q95': 6.032880957432284, 'q995': 8.562632826077145}
+2026-10-28T23:30:33Z INFO     src.evaluation.applicability | AD fold 1: {'n': 2198, 'in_domain': 2080, 'near_boundary': 105, 'out_of_domain': 13, 'q95': 6.058609198170169, 'q995': 8.680257376309045}
+2026-10-28T23:30:33Z INFO     src.evaluation.applicability | AD fold 2: {'n': 2197, 'in_domain': 2084, 'near_boundary': 105, 'out_of_domain': 8, 'q95': 6.038489775492114, 'q995': 8.73228313584596}
+2026-10-28T23:30:34Z INFO     src.evaluation.applicability | AD fold 3: {'n': 2197, 'in_domain': 2077, 'near_boundary': 115, 'out_of_domain': 5, 'q95': 5.99786712867761, 'q995': 8.616178740955947}
+2026-10-28T23:30:34Z INFO     src.evaluation.applicability | AD fold 4: {'n': 2197, 'in_domain': 2100, 'near_boundary': 87, 'out_of_domain': 10, 'q95': 6.061589050917253, 'q995': 8.504365088858368}
+2026-10-28T23:30:48Z WARNING  __main__ | Surface modelling gate FAILED -> CURATION_ONLY.
+2026-10-28T23:30:48Z WARNING  __main__ |   - only 2 distinct studies for surface_roughness_ra_um (< 3)
+2026-10-28T23:30:48Z WARNING  __main__ |   - only 23 deduplicated rows for surface_roughness_ra_um (< 25)
+2026-10-28T23:30:48Z WARNING  __main__ |   - largest study contributes 87% of rows (> 40%)
+2026-10-28T23:30:48Z WARNING  __main__ |   - fewer than 3 groups; LOGO/GroupKFold would not be meaningful
+2026-10-28T23:32:01Z INFO     src.interpretability.importance | Permutation importance done for fold 0 (1500 samples).
+2026-10-28T23:32:56Z INFO     src.interpretability.importance | Permutation importance done for fold 1 (1500 samples).
+2026-10-28T23:33:51Z INFO     src.interpretability.importance | Permutation importance done for fold 2 (1500 samples).
+2026-10-28T23:34:45Z INFO     src.interpretability.importance | Permutation importance done for fold 3 (1500 samples).
+2026-10-28T23:35:40Z INFO     src.interpretability.importance | Permutation importance done for fold 4 (1500 samples).
+2026-10-28T23:35:46Z INFO     src.evaluation.validation | learning curve random_forest n=878: train MAE=0.0556 val MAE=0.1434
+2026-10-28T23:35:58Z INFO     src.evaluation.validation | learning curve random_forest n=2197: train MAE=0.0484 val MAE=0.1288
+2026-10-28T23:36:17Z INFO     src.evaluation.validation | learning curve random_forest n=4394: train MAE=0.0456 val MAE=0.1148
+2026-10-28T23:36:51Z INFO     src.evaluation.validation | learning curve random_forest n=8789: train MAE=0.0443 val MAE=0.1019
+2026-10-28T18:07:21Z INFO     __main__ | Fitting deployment pipeline (random_forest) on all 10987 labelled rows.
+2026-10-28T18:07:49Z INFO     __main__ | Saved deployment model to /Users/anurag/Desktop/Projects_RP/artifacts/model_log_gvrh.joblib (132 features).
+2026-10-28T18:07:49Z INFO     __main__ | Loading deployment applicability-domain reference: /Users/anurag/Desktop/Projects_RP/artifacts/ad_reference.joblib
+2026-10-28T18:10:18Z INFO     __main__ | Fitting deployment pipeline (random_forest) on all 10987 labelled rows.
+2026-10-28T18:10:43Z INFO     __main__ | Saved deployment model to /Users/anurag/Desktop/Projects_RP/artifacts/model_log_gvrh.joblib (132 features).
+2026-10-28T18:10:43Z INFO     __main__ | Loading deployment applicability-domain reference: /Users/anurag/Desktop/Projects_RP/artifacts/ad_reference.joblib

@@ -1,0 +1,23 @@
+2026-10-28T23:12:23Z INFO     src.evaluation.validation | Y-randomization: ridge, 5 permutations
+2026-10-28T23:13:39Z INFO     src.evaluation.validation |   perm 0: R2=-0.0162 MAE=0.2956
+2026-10-28T23:14:56Z INFO     src.evaluation.validation |   perm 1: R2=-0.0068 MAE=0.2937
+2026-10-28T23:16:12Z INFO     src.evaluation.validation |   perm 2: R2=-0.0172 MAE=0.2955
+2026-10-28T23:17:28Z INFO     src.evaluation.validation |   perm 3: R2=-0.0138 MAE=0.2952
+2026-10-28T23:18:45Z INFO     src.evaluation.validation |   perm 4: R2=-0.0186 MAE=0.2958
+2026-10-28T23:18:45Z INFO     src.evaluation.validation | Y-randomization: random_forest, 2 permutations
+2026-10-28T23:21:04Z INFO     src.evaluation.validation |   perm 0: R2=-0.1116 MAE=0.3089
+2026-10-28T23:23:23Z INFO     src.evaluation.validation |   perm 1: R2=-0.1194 MAE=0.3097
+{
+  "ridge": {
+    "r2_mean": -0.014521917809289613,
+    "r2_max": -0.0068029894290525085,
+    "mae_mean": 0.29516861180970333,
+    "rmse_mean": 0.3742339670233704
+  },
+  "random_forest": {
+    "r2_mean": -0.11547032360343962,
+    "r2_max": -0.11158781100174245,
+    "mae_mean": 0.3093341775167679,
+    "rmse_mean": 0.39236946274624607
+  }
+}

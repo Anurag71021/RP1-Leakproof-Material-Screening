@@ -1,0 +1,6 @@
+rank,candidate_id,candidate_label,status,predicted_log_gvrh,surface_roughness_ra_um
+1,ti15mo_polished_2,Ti-15Mo-5Zr-3Al - polishing level 2,RANKED,1.568296132395072,0.17
+2,ti64_eli_tumbled,Ti-6Al-4V ELI - vibration tumbled,RANKED,1.5699563050313246,0.28
+3,ti64_eli_mao_blasted,Ti-6Al-4V ELI - MAO + blasting,RANKED,1.5699563050313246,0.5
+4,ti64_eli_mao,Ti-6Al-4V ELI - MAO (alkaline silicate),RANKED,1.5699563050313246,1.5
+5,ss316l_polished_2,316L stainless steel - polishing level 2,RANKED,1.8721236246041568,0.06

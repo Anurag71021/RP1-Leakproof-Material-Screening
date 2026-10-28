@@ -1,0 +1,121 @@
+{
+  "orders_tested": 2,
+  "top_candidates": [
+    "ss316l_polished_2",
+    "ti15mo_polished_2"
+  ],
+  "top_flips": true,
+  "results": [
+    {
+      "order": [
+        "predicted_log_gvrh",
+        "surface_roughness_ra_um"
+      ],
+      "ascending": [
+        true,
+        true
+      ],
+      "n_ranked": 5,
+      "top_candidate": "ti15mo_polished_2",
+      "top_label": "Ti-15Mo-5Zr-3Al - polishing level 2",
+      "ranking": [
+        {
+          "rank": 1,
+          "candidate_id": "ti15mo_polished_2",
+          "candidate_label": "Ti-15Mo-5Zr-3Al - polishing level 2",
+          "status": "RANKED",
+          "predicted_log_gvrh": 1.568296132395072,
+          "surface_roughness_ra_um": 0.17
+        },
+        {
+          "rank": 2,
+          "candidate_id": "ti64_eli_tumbled",
+          "candidate_label": "Ti-6Al-4V ELI - vibration tumbled",
+          "status": "RANKED",
+          "predicted_log_gvrh": 1.5699563050313246,
+          "surface_roughness_ra_um": 0.28
+        },
+        {
+          "rank": 3,
+          "candidate_id": "ti64_eli_mao_blasted",
+          "candidate_label": "Ti-6Al-4V ELI - MAO + blasting",
+          "status": "RANKED",
+          "predicted_log_gvrh": 1.5699563050313246,
+          "surface_roughness_ra_um": 0.5
+        },
+        {
+          "rank": 4,
+          "candidate_id": "ti64_eli_mao",
+          "candidate_label": "Ti-6Al-4V ELI - MAO (alkaline silicate)",
+          "status": "RANKED",
+          "predicted_log_gvrh": 1.5699563050313246,
+          "surface_roughness_ra_um": 1.5
+        },
+        {
+          "rank": 5,
+          "candidate_id": "ss316l_polished_2",
+          "candidate_label": "316L stainless steel - polishing level 2",
+          "status": "RANKED",
+          "predicted_log_gvrh": 1.8721236246041568,
+          "surface_roughness_ra_um": 0.06
+        }
+      ]
+    },
+    {
+      "order": [
+        "surface_roughness_ra_um",
+        "predicted_log_gvrh"
+      ],
+      "ascending": [
+        true,
+        true
+      ],
+      "n_ranked": 5,
+      "top_candidate": "ss316l_polished_2",
+      "top_label": "316L stainless steel - polishing level 2",
+      "ranking": [
+        {
+          "rank": 1,
+          "candidate_id": "ss316l_polished_2",
+          "candidate_label": "316L stainless steel - polishing level 2",
+          "status": "RANKED",
+          "surface_roughness_ra_um": 0.06,
+          "predicted_log_gvrh": 1.8721236246041568
+        },
+        {
+          "rank": 2,
+          "candidate_id": "ti15mo_polished_2",
+          "candidate_label": "Ti-15Mo-5Zr-3Al - polishing level 2",
+          "status": "RANKED",
+          "surface_roughness_ra_um": 0.17,
+          "predicted_log_gvrh": 1.568296132395072
+        },
+        {
+          "rank": 3,
+          "candidate_id": "ti64_eli_tumbled",
+          "candidate_label": "Ti-6Al-4V ELI - vibration tumbled",
+          "status": "RANKED",
+          "surface_roughness_ra_um": 0.28,
+          "predicted_log_gvrh": 1.5699563050313246
+        },
+        {
+          "rank": 4,
+          "candidate_id": "ti64_eli_mao_blasted",
+          "candidate_label": "Ti-6Al-4V ELI - MAO + blasting",
+          "status": "RANKED",
+          "surface_roughness_ra_um": 0.5,
+          "predicted_log_gvrh": 1.5699563050313246
+        },
+        {
+          "rank": 5,
+          "candidate_id": "ti64_eli_mao",
+          "candidate_label": "Ti-6Al-4V ELI - MAO (alkaline silicate)",
+          "status": "RANKED",
+          "surface_roughness_ra_um": 1.5,
+          "predicted_log_gvrh": 1.5699563050313246
+        }
+      ]
+    }
+  ],
+  "interpretation": "Rank flips under a different criterion priority show that no single 'best' material is supported by the evidence. Flips are a feature of honest screening, not a bug."
+}

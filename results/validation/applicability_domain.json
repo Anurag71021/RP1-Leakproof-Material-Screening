@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-28T18:01:04+00:00",
+  "method": "mean Euclidean distance to k=5 nearest training neighbours in standardized Magpie composition space; thresholds are the 95th and 99.5th percentiles of training-fold self-distances",
+  "per_fold": {
+    "0": {
+      "n": 2198,
+      "in_domain": 2092,
+      "near_boundary": 99,
+      "out_of_domain": 7,
+      "q95": 6.032880957432284,
+      "q995": 8.562632826077145
+    },
+    "1": {
+      "n": 2198,
+      "in_domain": 2080,
+      "near_boundary": 105,
+      "out_of_domain": 13,
+      "q95": 6.058609198170169,
+      "q995": 8.680257376309045
+    },
+    "2": {
+      "n": 2197,
+      "in_domain": 2084,
+      "near_boundary": 105,
+      "out_of_domain": 8,
+      "q95": 6.038489775492114,
+      "q995": 8.73228313584596
+    },
+    "3": {
+      "n": 2197,
+      "in_domain": 2077,
+      "near_boundary": 115,
+      "out_of_domain": 5,
+      "q95": 5.99786712867761,
+      "q995": 8.616178740955947
+    },
+    "4": {
+      "n": 2197,
+      "in_domain": 2100,
+      "near_boundary": 87,
+      "out_of_domain": 10,
+      "q95": 6.061589050917253,
+      "q995": 8.504365088858368
+    }
+  },
+  "overall": {
+    "IN_DOMAIN": 10433,
+    "NEAR_BOUNDARY": 511,
+    "OUT_OF_DOMAIN": 43
+  },
+  "deployment_thresholds": {
+    "q95": 5.702731272149643,
+    "q995": 8.060398318151902
+  },
+  "deployment_counts": {
+    "IN_DOMAIN": 10870,
+    "NEAR_BOUNDARY": 106,
+    "OUT_OF_DOMAIN": 11
+  },
+  "artefact": "artifacts/ad_reference.joblib",
+  "interpretation": "AD is support in descriptor space. It is not a probability of implant success, biocompatibility or clinical performance."
+}

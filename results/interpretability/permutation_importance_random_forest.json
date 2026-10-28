@@ -1,0 +1,72 @@
+{
+  "model": "random_forest",
+  "created_utc": "2026-10-28T18:05:40+00:00",
+  "n_repeats": 5,
+  "max_samples_per_fold": 1500,
+  "interpretation": "Associational only. Permutation importance describes reliance of this fitted model on descriptor columns; it is not causal and does not imply a physical mechanism or a clinical effect.",
+  "top_10": [
+    {
+      "feature": "MagpieData mean GSvolume_pa",
+      "importance_mean": 0.03402492459611507,
+      "importance_std_across_folds": 0.001781603988764938,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mean MeltingT",
+      "importance_mean": 0.020643576933767546,
+      "importance_std_across_folds": 0.002987299930505757,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mode GSvolume_pa",
+      "importance_mean": 0.018275961275361383,
+      "importance_std_across_folds": 0.0003395713565308681,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData maximum MeltingT",
+      "importance_mean": 0.014413598809893574,
+      "importance_std_across_folds": 0.0015545168721949531,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mode NUnfilled",
+      "importance_mean": 0.013804180353901616,
+      "importance_std_across_folds": 0.001434320426789541,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData maximum MendeleevNumber",
+      "importance_mean": 0.006675285737366228,
+      "importance_std_across_folds": 0.0011032267967202012,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mean NUnfilled",
+      "importance_mean": 0.006553991652337579,
+      "importance_std_across_folds": 0.0003573385051575811,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData minimum NUnfilled",
+      "importance_mean": 0.005020293284571922,
+      "importance_std_across_folds": 0.0007755860793283791,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mean MendeleevNumber",
+      "importance_mean": 0.004512972878757548,
+      "importance_std_across_folds": 0.0006224404694598813,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData maximum GSvolume_pa",
+      "importance_mean": 0.004341008304767886,
+      "importance_std_across_folds": 0.0007397806665894849,
+      "n_folds": 5
+    }
+  ],
+  "n_features": 132,
+  "csv": "results/interpretability/permutation_importance_random_forest.csv",
+  "plot": "results/plots/permutation_importance_random_forest.png"
+}

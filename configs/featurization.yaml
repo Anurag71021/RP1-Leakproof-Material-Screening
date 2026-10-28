@@ -1,0 +1,35 @@
+featurization:
+  # Composition-only descriptors. Structure is deliberately NOT used:
+  # it is unavailable for hypothetical/alloy candidates and would make the
+  # screening path inconsistent with the benchmark path.
+  primary: magpie
+  fallback: simple_composition
+  per_fold: true
+  notes: >
+    The featurizer is stateless (it learns no parameters from the training
+    data). It is nevertheless invoked inside each official fold to make the
+    per-fold discipline structural and auditable, and a test asserts that
+    fitting on different folds produces identical feature values for the
+    same composition.
+  magpie:
+    preset: magpie
+    impute_nan: false
+  simple:
+    include_element_fractions: false
+
+validation:
+  y_randomization:
+    n_permutations_ridge: 5
+    n_permutations_random_forest: 2
+  learning_curve_sizes: [0.1, 0.25, 0.5, 1.0]
+  permutation_importance:
+    n_repeats: 5
+    max_samples: 1500
+
+screening:
+  modulus_units: log(GPa)
+  source_pools:
+    - observed_literature
+    - benchmark_prediction
+    - literature_experimental
+    - user_constraint

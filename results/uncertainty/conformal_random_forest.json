@@ -1,0 +1,60 @@
+{
+  "method": "split conformal, absolute OOF residual nonconformity",
+  "model": "random_forest",
+  "created_utc": "2026-10-28T18:00:17+00:00",
+  "n": 10987,
+  "levels": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "calibration_scheme": "Coverage: for each held-out fold, quantiles are calibrated on the other four folds' OOF residuals. Deployment half-widths use all OOF residuals and are therefore slightly optimistic on the training data.",
+  "deployment_halfwidths": {
+    "0.8": 0.15692949417170093,
+    "0.9": 0.23548819792013564,
+    "0.95": 0.31855642701356035
+  },
+  "coverage": [
+    {
+      "nominal_coverage": 0.8,
+      "mean_interval_halfwidth": 0.15697022436208463,
+      "empirical_coverage": 0.8001271897363557,
+      "coverage_by_fold": [
+        0.7998180163785259,
+        0.8030027297543221,
+        0.8051888939462903,
+        0.7933545744196632,
+        0.7992717341829768
+      ],
+      "abs_coverage_gap": 0.00012718973635561515
+    },
+    {
+      "nominal_coverage": 0.9,
+      "mean_interval_halfwidth": 0.2349475065527396,
+      "empirical_coverage": 0.9000632428288554,
+      "coverage_by_fold": [
+        0.9021838034576888,
+        0.9030937215650592,
+        0.9016841147018662,
+        0.8998634501593081,
+        0.893491124260355
+      ],
+      "abs_coverage_gap": 6.324282885539212e-05
+    },
+    {
+      "nominal_coverage": 0.95,
+      "mean_interval_halfwidth": 0.31902339941521796,
+      "empirical_coverage": 0.9502136878686835,
+      "coverage_by_fold": [
+        0.9531392174704276,
+        0.9494995450409464,
+        0.9503868912152936,
+        0.9535730541647701,
+        0.94446973145198
+      ],
+      "abs_coverage_gap": 0.00021368786868358747
+    }
+  ],
+  "absolute_residual_median": 0.06845172161303692,
+  "absolute_residual_p95": 0.31845167953522
+}

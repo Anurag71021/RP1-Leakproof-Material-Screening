@@ -1,0 +1,20 @@
+{
+  "selected_by": "lowest mean OOF MAE across official folds",
+  "model": "random_forest",
+  "summary": {
+    "mae": {
+      "mean": 0.102399017830241,
+      "std": 0.0016168232725495408
+    },
+    "rmse": {
+      "mean": 0.15199159927980843,
+      "std": 0.004557121128394279
+    },
+    "r2": {
+      "mean": 0.8325241708071269,
+      "std": 0.010037688443335805
+    }
+  },
+  "oof_file": "results/predictions/oof_random_forest_matbench_log_gvrh.csv",
+  "created_utc": "2026-10-28T17:40:46+00:00"
+}

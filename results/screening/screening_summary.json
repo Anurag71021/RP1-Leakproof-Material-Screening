@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-28T18:10:44+00:00",
+  "model": "random_forest",
+  "model_artefact": "artifacts/model_log_gvrh.joblib",
+  "model_fit": "all labelled rows (deployment only)",
+  "benchmark_metrics_source": "results/metrics/benchmark_metrics.json (official OOF)",
+  "benchmark_metrics": {
+    "mae": {
+      "mean": 0.102399017830241,
+      "std": 0.0016168232725495408
+    },
+    "rmse": {
+      "mean": 0.15199159927980843,
+      "std": 0.004557121128394279
+    },
+    "r2": {
+      "mean": 0.8325241708071269,
+      "std": 0.010037688443335805
+    }
+  },
+  "target": "log10(G_VRH)",
+  "target_units": "log10(GPa)",
+  "conformal_level": 0.9,
+  "conformal_halfwidth": 0.23548819792013564,
+  "ad_reference": "artifacts/ad_reference.joblib",
+  "constraints": {
+    "modulus_min_log10": 1.4,
+    "modulus_max_log10": 2.0,
+    "ra_max_um": 2.0,
+    "ca_max_deg": 90.0
+  },
+  "n_candidates": 14,
+  "status_counts": {
+    "INDETERMINATE": 8,
+    "RANKED": 5,
+    "CONSTRAINT_FAILED": 1
+  },
+  "ranking_order": [
+    "predicted_log_gvrh",
+    "surface_roughness_ra_um"
+  ],
+  "sensitivity_top_candidates": [
+    "ss316l_polished_2",
+    "ti15mo_polished_2"
+  ],
+  "sensitivity_top_flips": true,
+  "provenance": {
+    "dataset": "matbench_log_gvrh",
+    "official_hash": "098af941f4c663270f1fe21abf20ffad6fb85ecbfcba5786ceac03983ac29da7",
+    "cache_sha256": "ee6fcf8b0edf884a0db4d64b2c117ddc1b1da58035d16d379d2e2bacca172474"
+  },
+  "disclaimer": "RESEARCH DEMONSTRATOR - Not for clinical use. No patient-specific advice. No implant recommendation implied.",
+  "warnings": [
+    "Predicted log10(G_VRH) is computed DFT shear modulus, not an experimental implant modulus.",
+    "Observed Ra and contact angle values are laboratory-specific and not directly comparable across protocols.",
+    "No composite suitability score is produced. INDETERMINATE candidates are not ranked.",
+    "Applicability-domain status describes descriptor-space support, not probability of success."
+  ]
+}

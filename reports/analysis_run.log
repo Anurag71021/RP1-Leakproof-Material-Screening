@@ -1,0 +1,182 @@
+2026-10-28T23:30:17Z INFO     __main__ | Residual and parity diagnostics for random_forest
+2026-10-28T23:30:17Z INFO     __main__ | Conformal uncertainty for random_forest
+2026-10-28T23:30:17Z INFO     __main__ | Applicability domain (per official fold + deployment reference)
+2026-10-28T23:30:33Z INFO     src.evaluation.applicability | AD fold 0: {'n': 2198, 'in_domain': 2092, 'near_boundary': 99, 'out_of_domain': 7, 'q95': 6.032880957432284, 'q995': 8.562632826077145}
+2026-10-28T23:30:33Z INFO     src.evaluation.applicability | AD fold 1: {'n': 2198, 'in_domain': 2080, 'near_boundary': 105, 'out_of_domain': 13, 'q95': 6.058609198170169, 'q995': 8.680257376309045}
+2026-10-28T23:30:33Z INFO     src.evaluation.applicability | AD fold 2: {'n': 2197, 'in_domain': 2084, 'near_boundary': 105, 'out_of_domain': 8, 'q95': 6.038489775492114, 'q995': 8.73228313584596}
+2026-10-28T23:30:34Z INFO     src.evaluation.applicability | AD fold 3: {'n': 2197, 'in_domain': 2077, 'near_boundary': 115, 'out_of_domain': 5, 'q95': 5.99786712867761, 'q995': 8.616178740955947}
+2026-10-28T23:30:34Z INFO     src.evaluation.applicability | AD fold 4: {'n': 2197, 'in_domain': 2100, 'near_boundary': 87, 'out_of_domain': 10, 'q95': 6.061589050917253, 'q995': 8.504365088858368}
+2026-10-28T23:32:01Z INFO     src.interpretability.importance | Permutation importance done for fold 0 (1500 samples).
+2026-10-28T23:32:56Z INFO     src.interpretability.importance | Permutation importance done for fold 1 (1500 samples).
+2026-10-28T23:33:51Z INFO     src.interpretability.importance | Permutation importance done for fold 2 (1500 samples).
+2026-10-28T23:34:45Z INFO     src.interpretability.importance | Permutation importance done for fold 3 (1500 samples).
+2026-10-28T23:35:40Z INFO     src.interpretability.importance | Permutation importance done for fold 4 (1500 samples).
+2026-10-28T23:35:46Z INFO     src.evaluation.validation | learning curve random_forest n=878: train MAE=0.0556 val MAE=0.1434
+2026-10-28T23:35:58Z INFO     src.evaluation.validation | learning curve random_forest n=2197: train MAE=0.0484 val MAE=0.1288
+2026-10-28T23:36:17Z INFO     src.evaluation.validation | learning curve random_forest n=4394: train MAE=0.0456 val MAE=0.1148
+2026-10-28T23:36:51Z INFO     src.evaluation.validation | learning curve random_forest n=8789: train MAE=0.0443 val MAE=0.1019
+{
+  "model": "random_forest",
+  "shap_available": false,
+  "shap_status": "not run in this build; permutation importance is the primary, stable method",
+  "residual_stats": {
+    "model": "random_forest",
+    "n": 10987,
+    "residual_mean": 0.000635748800373156,
+    "residual_std": 0.15205181570670517,
+    "residual_median": 0.016127501677883904,
+    "abs_residual_p95": 0.31845167953522,
+    "corr_pred_abs_residual": -0.17178246570412864,
+    "parity_plot": "results/plots/parity_plot_random_forest.png",
+    "residual_plot": "results/plots/residuals_random_forest.png",
+    "reading": "A strong positive corr(pred, |residual|) indicates error growth at high predicted modulus (heteroscedasticity), not necessarily leakage."
+  },
+  "conformal_coverage": [
+    {
+      "nominal_coverage": 0.8,
+      "mean_interval_halfwidth": 0.15697022436208463,
+      "empirical_coverage": 0.8001271897363557,
+      "coverage_by_fold": [
+        0.7998180163785259,
+        0.8030027297543221,
+        0.8051888939462903,
+        0.7933545744196632,
+        0.7992717341829768
+      ],
+      "abs_coverage_gap": 0.00012718973635561515
+    },
+    {
+      "nominal_coverage": 0.9,
+      "mean_interval_halfwidth": 0.2349475065527396,
+      "empirical_coverage": 0.9000632428288554,
+      "coverage_by_fold": [
+        0.9021838034576888,
+        0.9030937215650592,
+        0.9016841147018662,
+        0.8998634501593081,
+        0.893491124260355
+      ],
+      "abs_coverage_gap": 6.324282885539212e-05
+    },
+    {
+      "nominal_coverage": 0.95,
+      "mean_interval_halfwidth": 0.31902339941521796,
+      "empirical_coverage": 0.9502136878686835,
+      "coverage_by_fold": [
+        0.9531392174704276,
+        0.9494995450409464,
+        0.9503868912152936,
+        0.9535730541647701,
+        0.94446973145198
+      ],
+      "abs_coverage_gap": 0.00021368786868358747
+    }
+  ],
+  "ad_overall": {
+    "IN_DOMAIN": 10433,
+    "NEAR_BOUNDARY": 511,
+    "OUT_OF_DOMAIN": 43
+  },
+  "top_features": [
+    {
+      "feature": "MagpieData mean GSvolume_pa",
+      "importance_mean": 0.03402492459611507,
+      "importance_std_across_folds": 0.001781603988764938,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mean MeltingT",
+      "importance_mean": 0.020643576933767546,
+      "importance_std_across_folds": 0.002987299930505757,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mode GSvolume_pa",
+      "importance_mean": 0.018275961275361383,
+      "importance_std_across_folds": 0.0003395713565308681,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData maximum MeltingT",
+      "importance_mean": 0.014413598809893574,
+      "importance_std_across_folds": 0.0015545168721949531,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mode NUnfilled",
+      "importance_mean": 0.013804180353901616,
+      "importance_std_across_folds": 0.001434320426789541,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData maximum MendeleevNumber",
+      "importance_mean": 0.006675285737366228,
+      "importance_std_across_folds": 0.0011032267967202012,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mean NUnfilled",
+      "importance_mean": 0.006553991652337579,
+      "importance_std_across_folds": 0.0003573385051575811,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData minimum NUnfilled",
+      "importance_mean": 0.005020293284571922,
+      "importance_std_across_folds": 0.0007755860793283791,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData mean MendeleevNumber",
+      "importance_mean": 0.004512972878757548,
+      "importance_std_across_folds": 0.0006224404694598813,
+      "n_folds": 5
+    },
+    {
+      "feature": "MagpieData maximum GSvolume_pa",
+      "importance_mean": 0.004341008304767886,
+      "importance_std_across_folds": 0.0007397806665894849,
+      "n_folds": 5
+    }
+  ],
+  "learning_curves": {
+    "random_forest": [
+      {
+        "fraction": 0.1,
+        "n_train": 878,
+        "train_mae": 0.05560769242792989,
+        "train_r2": 0.9590948965119059,
+        "val_mae": 0.14344879138544817,
+        "val_r2": 0.7182524516519675,
+        "gap_mae": 0.08784109895751827
+      },
+      {
+        "fraction": 0.25,
+        "n_train": 2197,
+        "train_mae": 0.04840789210111306,
+        "train_r2": 0.9564049321655372,
+        "val_mae": 0.12881591375864815,
+        "val_r2": 0.7645510687883244,
+        "gap_mae": 0.08040802165753508
+      },
+      {
+        "fraction": 0.5,
+        "n_train": 4394,
+        "train_mae": 0.045551083833949235,
+        "train_r2": 0.9622304149075382,
+        "val_mae": 0.11484270361555068,
+        "val_r2": 0.8063765232455082,
+        "gap_mae": 0.06929161978160145
+      },
+      {
+        "fraction": 1.0,
+        "n_train": 8789,
+        "train_mae": 0.044335502474483854,
+        "train_r2": 0.9616209454056045,
+        "val_mae": 0.10187770563401566,
+        "val_r2": 0.8452264778169083,
+        "gap_mae": 0.057542203159531805
+      }
+    ]
+  }
+}

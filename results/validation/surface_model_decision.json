@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-10-28T18:00:48+00:00",
+  "script": "scripts/train_surface_model.py",
+  "gate": {
+    "locked_endpoint": "surface_roughness_ra_um",
+    "thresholds": {
+      "min_studies": 3,
+      "min_rows": 25,
+      "max_single_study_share": 0.4
+    },
+    "observed": {
+      "studies": 2,
+      "rows": 23,
+      "top_study_share": 0.8695652173913043
+    },
+    "checks": {
+      "a_min_studies": false,
+      "b_min_rows": false,
+      "c_no_dominant_study": false,
+      "d_study_aware_split_feasible": false,
+      "e_phase4_gate_passed": true
+    },
+    "passed": false,
+    "decision": "CURATION_ONLY",
+    "reasons": [
+      "only 2 distinct studies for surface_roughness_ra_um (< 3)",
+      "only 23 deduplicated rows for surface_roughness_ra_um (< 25)",
+      "largest study contributes 87% of rows (> 40%)",
+      "fewer than 3 groups; LOGO/GroupKFold would not be meaningful"
+    ]
+  },
+  "observed": {
+    "n_raw": 40,
+    "n_clean": 40,
+    "n_duplicates_removed": 0,
+    "n_distinct_studies": 5,
+    "rows_per_study": {
+      "min": 3,
+      "median": 6.0,
+      "max": 20,
+      "by_study": {
+        "10.3390/ma14133702": 20,
+        "10.3390/ma18050955": 8,
+        "10.1038/s41598-020-76448-w": 6,
+        "10.1016/j.heliyon.2024.e37808": 3,
+        "10.3390/ijms27104335": 3
+      }
+    },
+    "top_study_share": 0.5,
+    "endpoint_counts": {
+      "surface_roughness_ra_um": 23,
+      "water_contact_angle_deg": 9,
+      "corrosion_ecorr_v": 8
+    },
+    "units_by_endpoint": {
+      "corrosion_ecorr_v": [
+        "V"
+      ],
+      "surface_roughness_ra_um": [
+        "um"
+      ],
+      "water_contact_angle_deg": [
+        "degrees"
+      ]
+    },
+    "missing_counts": {
+      "coating_chemistry": 30,
+      "treatment_parameters": 20,
+      "sd_or_sem": 11,
+      "dispersion_type": 11,
+      "n_replicates": 34,
+      "measurement_method": 0,
+      "reference_electrode": 32,
+      "conditions_detail": 0
+    },
+    "locked_endpoint": "surface_roughness_ra_um",
+    "locked_endpoint_rows": 23,
+    "locked_endpoint_studies": 2,
+    "locked_endpoint_top_study_share": 0.8695652173913043,
+    "excluded_studies": [
+      {
+        "doi": "10.1016/j.heliyon.2020.e04762",
+        "pmcid": "PMC7475236",
+        "reason": "Dental-implant application context; out of the locked metallic orthopaedic scope."
+      },
+      {
+        "doi": "n/a (PMCID only)",
+        "pmcid": "PMC12364894",
+        "reason": "Dental-implant focus (sandblasting/acid etching of abutment-type surfaces); out of scope."
+      }
+    ],
+    "dedup_log": {
+      "key": [
+        "study_id",
+        "material_grade_or_formula",
+        "surface_treatment",
+        "coating_chemistry",
+        "endpoint_key",
+        "conditions_key"
+      ],
+      "n_input": 40,
+      "n_duplicates_removed": 0,
+      "n_output": 40,
+      "removed_rows": []
+    }
+  },
+  "decision": "CURATION_ONLY",
+  "model_trained": false,
+  "artefact": null,
+  "curation_deliverables": [
+    "data/literature/surface_evidence_raw.csv",
+    "data/literature/surface_evidence_clean.csv",
+    "docs/SURFACE_EVIDENCE_AUDIT.md",
+    "docs/SURFACE_EVIDENCE_CURATED.md",
+    "data_cards/surface_evidence_data_card.md"
+  ]
+}

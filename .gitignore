@@ -1,0 +1,35 @@
+# Python / environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Raw / large data (provenance + checksums are committed instead)
+data/raw/*
+!data/raw/.gitkeep
+data/literature/sources/
+artifacts/
+*.pkl
+*.pkl.gz
+*.joblib
+
+# Unrelated embedded repository (agent skills, not part of RP-1)
+.mattpocock-skills/
+
+# Generated outputs that are large or machine-specific
+reports/pytest_run_*.log
+
+# OS
+.DS_Store
+
+# Packaging metadata
+*.egg-info/

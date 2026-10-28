@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-10-28T18:00:08+00:00",
+  "model": "random_forest",
+  "checks": {
+    "official_folds_used": {
+      "passed": true,
+      "evidence": "results/splits/split_manifest.json (split_type=official_folds, 5 folds)"
+    },
+    "split_integrity": {
+      "passed": true,
+      "evidence": "manifest checks: {'all_official_folds_present': True, 'test_folds_partition_dataset': True, 'no_train_test_overlap': True, 'train_plus_test_equals_n': True}"
+    },
+    "identifiers_excluded": {
+      "passed": true,
+      "evidence": "runtime feature names contain no identifiers; hits=[]; frame has no identifier columns"
+    },
+    "pipeline_only_preprocessing": {
+      "passed": true,
+      "evidence": "Pipeline(features -> impute -> scale -> estimator); train.py fits on fold-local train slice only; no global fit_transform"
+    },
+    "per_fold_featurization": {
+      "passed": true,
+      "evidence": "same compositions featurized after fitting on disjoint subsets produce identical values (stateless featurizer, 132 Magpie descriptors)"
+    },
+    "oof_coverage": {
+      "passed": true,
+      "evidence": "OOF files cover every sample exactly once: {'dummy': 'ok', 'ridge': 'ok', 'random_forest': 'ok'}"
+    },
+    "y_randomization_collapse": {
+      "passed": true,
+      "evidence": "best=random_forest; randomized R2 max=-0.1116 (<=0.10 required); randomized MAE=0.3093 vs Dummy MAE=0.2931"
+    },
+    "model_beats_dummy": {
+      "passed": true,
+      "evidence": "best=random_forest; MAE 0.1024 vs Dummy 0.2931; R2 0.8325 vs Dummy -0.0002"
+    },
+    "learning_curves_present": {
+      "passed": true,
+      "evidence": "learning_curves.json; model=random_forest"
+    },
+    "residuals_parity_present": {
+      "passed": true,
+      "evidence": "results/plots/parity_plot_random_forest.png; results/plots/residuals_random_forest.png"
+    },
+    "duplicates_audited": {
+      "passed": true,
+      "evidence": "0 duplicate groups, 0 cross-fold"
+    },
+    "leakage_tests_present": {
+      "passed": true,
+      "evidence": "tests/test_leakage_sanity.py exists (executed in Phase 10)"
+    }
+  },
+  "passed": true,
+  "marker": "LEAKAGE_GATE: PASSED",
+  "y_randomization": {
+    "r2_mean": -0.11547032360343962,
+    "r2_max": -0.11158781100174245,
+    "mae_mean": 0.3093341775167679,
+    "rmse_mean": 0.39236946274624607
+  },
+  "real": {
+    "mae": {
+      "mean": 0.102399017830241,
+      "std": 0.0016168232725495408
+    },
+    "rmse": {
+      "mean": 0.15199159927980843,
+      "std": 0.004557121128394279
+    },
+    "r2": {
+      "mean": 0.8325241708071269,
+      "std": 0.010037688443335805
+    }
+  },
+  "dummy": {
+    "mae": {
+      "mean": 0.2931477285283942,
+      "std": 0.003455711812849397
+    },
+    "rmse": {
+      "mean": 0.37159054403283154,
+      "std": 0.004248086436096816
+    },
+    "r2": {
+      "mean": -0.00019194747673711987,
+      "std": 0.00018236541319986417
+    }
+  }
+}

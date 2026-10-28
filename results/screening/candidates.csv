@@ -1,0 +1,15 @@
+candidate_id,candidate_label,alloy_family
+ti64_eli_tumbled,Ti-6Al-4V ELI - vibration tumbled,Ti_alloy
+ti64_eli_mao,Ti-6Al-4V ELI - MAO (alkaline silicate),Ti_alloy
+ti64_eli_mao_blasted,Ti-6Al-4V ELI - MAO + blasting,Ti_alloy
+ti64_am_uncoated,Ti-6Al-4V AM - chemically polished (uncoated),Ti_alloy
+ti64_am_nanoporous,Ti-6Al-4V AM - anodized nanoporous,Ti_alloy
+ti64_am_nanotubular,Ti-6Al-4V AM - anodized nanotubular,Ti_alloy
+ti64_laser,Ti-6Al-4V - laser textured (P29),Ti_alloy
+ti64_laser_cyclohexane,Ti-6Al-4V - laser textured + cyclohexane 70 C,Ti_alloy
+cocr_polished_2,CoCr (Co-28Cr-6Mo) - polishing level 2,CoCr_alloy
+ss316l_polished_2,316L stainless steel - polishing level 2,stainless_steel
+ti15mo_polished_2,Ti-15Mo-5Zr-3Al - polishing level 2,Ti_alloy
+ti13nb13zr_bare,Ti-13Nb-13Zr - no surface evidence,Ti_alloy
+cpti_grade4,cp-Ti grade 4 - no surface evidence,Ti_alloy
+mg_az31,Mg AZ31 - no surface evidence,Mg_alloy

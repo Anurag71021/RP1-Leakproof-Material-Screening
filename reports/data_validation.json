@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-10-28T17:35:54+00:00",
+  "provenance": {
+    "dataset_id": "matbench_log_gvrh",
+    "task_name": "matbench_log_gvrh",
+    "benchmark_name": "matbench_v0.1",
+    "matbench_version": "0.6",
+    "retrieved_utc": "2026-10-28T17:34:56+00:00",
+    "source_url": "https://ml.materialsproject.org/projects/matbench_log_gvrh.json.gz",
+    "official_hash": "098af941f4c663270f1fe21abf20ffad6fb85ecbfcba5786ceac03983ac29da7",
+    "license": "Matbench v0.1 dataset (Dunn et al. 2020, npj Comput. Mater., doi:10.1038/s41524-020-00406-3). Underlying elastic data from de Jong et al. 2015 (Sci. Data, doi:10.1038/sdata.2015.9, CC BY 4.0). Benchmark code is MIT licensed. Confirm redistribution terms before publishing.",
+    "n_samples": 10987,
+    "columns": [
+      "structure",
+      "log10(G_VRH)"
+    ],
+    "target": "log10(G_VRH)",
+    "target_units": "log10(GPa)",
+    "target_task_type": "regression",
+    "fold_definitions": "official matbench 5-fold (task.validation[fold].train/test)",
+    "fold_sizes": {
+      "0": {
+        "n_train": 8789,
+        "n_test": 2198
+      },
+      "1": {
+        "n_train": 8789,
+        "n_test": 2198
+      },
+      "2": {
+        "n_train": 8790,
+        "n_test": 2197
+      },
+      "3": {
+        "n_train": 8790,
+        "n_test": 2197
+      },
+      "4": {
+        "n_train": 8790,
+        "n_test": 2197
+      }
+    },
+    "n_folds": 5,
+    "index_sha256": "5a2b602efe695b21794ec98edc9581661973bf6a3d5b7bab0cb294662b355b1d",
+    "cache_sha256": "ee6fcf8b0edf884a0db4d64b2c117ddc1b1da58035d16d379d2e2bacca172474",
+    "citation": [
+      "@Article{Dunn2020,\nauthor={Dunn, Alexander\nand Wang, Qi\nand Ganose, Alex\nand Dopp, Daniel\nand Jain, Anubhav},\ntitle={Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm},\njournal={npj Computational Materials},\nyear={2020},\nmonth={Sep},\nday={15},\nvolume={6},\nnumber={1},\npages={138},\nabstract={We present a benchmark test suite and an automated machine learning procedure for evaluating supervised machine learning (ML) models for predicting properties of inorganic bulk materials. The test suite, Matbench, is a set of 13{\\thinspace}ML tasks that range in size from 312 to 132k samples and contain data from 10 density functional theory-derived and experimental sources. Tasks include predicting optical, thermal, electronic, thermodynamic, tensile, and elastic properties given a material's composition and/or crystal structure. The reference algorithm, Automatminer, is a highly-extensible, fully automated ML pipeline for predicting materials properties from materials primitives (such as composition and crystal structure) without user intervention or hyperparameter tuning. We test Automatminer on the Matbench test suite and compare its predictive power with state-of-the-art crystal graph neural networks and a traditional descriptor-based Random Forest model. We find Automatminer achieves the best performance on 8 of 13 tasks in the benchmark. We also show our test suite is capable of exposing predictive advantages of each algorithm---namely, that crystal graph methods appear to outperform traditional machine learning methods given {\\textasciitilde}104 or greater data points. We encourage evaluating materials ML algorithms on the Matbench benchmark and comparing them against the latest version of Automatminer.},\nissn={2057-3960},\ndoi={10.1038/s41524-020-00406-3},\nurl={https://doi.org/10.1038/s41524-020-00406-3}\n}\n",
+      "@Article{deJong2015,\nauthor={de Jong, Maarten and Chen, Wei and Angsten, Thomas\nand Jain, Anubhav and Notestine, Randy and Gamst, Anthony\nand Sluiter, Marcel and Krishna Ande, Chaitanya\nand van der Zwaag, Sybrand and Plata, Jose J. and Toher, Cormac\nand Curtarolo, Stefano and Ceder, Gerbrand and Persson, Kristin A.\nand Asta, Mark},\ntitle={Charting the complete elastic properties\nof inorganic crystalline compounds},\njournal={Scientific Data},\nyear={2015},\nmonth={Mar},\nday={17},\npublisher={The Author(s)},\nvolume={2},\npages={150009},\nnote={Data Descriptor},\nurl={http://dx.doi.org/10.1038/sdata.2015.9}\n}"
+    ],
+    "retrieval_environment": {
+      "python": "3.10.18",
+      "platform": "macOS-26.6.1-arm64-arm-64bit",
+      "note": "Downloaded through the official matbench.bench API."
+    }
+  },
+  "validation": {
+    "required_columns_present": true,
+    "index_unique": true,
+    "index_non_null": true,
+    "n_rows": 10987,
+    "n_columns": 2,
+    "target_numeric": true,
+    "target_finite": true,
+    "target_min": 0.0,
+    "target_max": 2.718501688867274,
+    "target_mean": 1.553638510911706,
+    "target_std": 0.37161473108170545,
+    "structures_nonempty": true,
+    "n_elements_min": 1,
+    "n_elements_max": 5,
+    "identifier_columns_in_frame": [],
+    "leakage_safe_columns": true,
+    "failed_checks": [],
+    "passed": true
+  },
+  "duplicates": {
+    "n_rows": 10987,
+    "n_unique_keys": 10987,
+    "n_duplicate_groups": 0,
+    "n_duplicate_rows_beyond_first": 0,
+    "n_cross_fold_duplicate_groups": 0,
+    "cross_fold_examples": [],
+    "method": "reduced formula + space group + volume rounded to 0.01 A^3",
+    "action": "Reported, not altered: Matbench official folds are immutable. Cross-fold duplicates, if any, can only inflate scores and must be stated as a benchmark limitation."
+  },
+  "manifest_checks": {
+    "all_official_folds_present": true,
+    "test_folds_partition_dataset": true,
+    "no_train_test_overlap": true,
+    "train_plus_test_equals_n": true
+  },
+  "manifest_checks_passed": true
+}

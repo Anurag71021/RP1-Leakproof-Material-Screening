@@ -1,0 +1,12 @@
+{
+  "model": "random_forest",
+  "n": 10987,
+  "residual_mean": 0.000635748800373156,
+  "residual_std": 0.15205181570670517,
+  "residual_median": 0.016127501677883904,
+  "abs_residual_p95": 0.31845167953522,
+  "corr_pred_abs_residual": -0.17178246570412864,
+  "parity_plot": "results/plots/parity_plot_random_forest.png",
+  "residual_plot": "results/plots/residuals_random_forest.png",
+  "reading": "A strong positive corr(pred, |residual|) indicates error growth at high predicted modulus (heteroscedasticity), not necessarily leakage."
+}
